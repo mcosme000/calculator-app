@@ -1,5 +1,9 @@
 @import './styles/variables';
+@import './styles/screen';
 @import './styles/calculator';
+
+// google fonts
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;600;700&display=swap');
 
 * {
   padding: 0;
@@ -19,6 +23,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: var(--main-font);
 }
 
 .padding {
