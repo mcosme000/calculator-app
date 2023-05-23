@@ -1,4 +1,8 @@
 :root {
+  --white: #fff;
+  --yellow: #F9E152;
+  --gray: #444853;
+
   --dark-background: #3B4664;
   --dark-screen: #181F32;
   --dark-calculator: #252D44;
@@ -8,6 +12,7 @@
   --neon-background: #17062A;
   --neon-screen: #1E0836;
   --neon-calculator: #1E0836;
+
   /* BUTTONS */
   --dark: #EAE3DB;
   --dark-shadow: #B2A295;
@@ -18,21 +23,26 @@
   --neon: #331B4D;
   --neon-shadow: #851C9D;
   --neon-hover: #6B34AC;
+
   /* RESET */
-  --reset-dark: #A2B3E1;
+  --reset-dark: #667196;
   --reset-dark-shadow: #424E74;
+  --reset-dark-hover: #A2B3E1;
   --reset-light: #4C8085;
   --reset-light-shadow: #196167;
   --reset-light-hover: #62B5BD;
-  --reset-neon: #8631B0;
+  --reset-neon: #4F1077;
   --reset-neon-shadow: #BA17F7;
+  --reset-neon-hover: #8631B0;
+
   /* EQUAL */
-  --equal-dark: #F96C5B;
+  --equal-dark: #C14A39;
   --equal-dark-shadow: #8F2316;
+  --equal-dark-hover: #F96C5B;
   --equal-light: #BA5B22;
   --equal-light-shadow: #903800;
   --equal-light-hover: #FF8B38;
-  --equal-neon: #94FFF9;
+  --equal-neon: #65DBCF;
   --equal-neon-shadow: #47FDF1;
+  --equal-neon-hover: #94FFF9;
 }
-/*# sourceMappingURL=variables.css.map */
