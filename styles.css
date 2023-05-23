@@ -49,7 +49,6 @@
   padding: 10px 2px;
   display: flex;
   justify-content: space-between;
-  color: var(--white);
 }
 
 .theme-selector {
@@ -65,7 +64,6 @@
 .screen {
   border-radius: 10px;
   margin-bottom: 20px;
-  color: var(--white);
   text-align: right;
 }
 .screen .top-screen {
@@ -130,8 +128,12 @@ button {
 .light-theme {
   background: var(--light-background);
 }
+.light-theme .top-section {
+  color: var(--gray);
+}
 .light-theme .screen {
   background: var(--light-screen);
+  color: var(--gray);
 }
 .light-theme .calculator {
   background: var(--light-calculator);
@@ -164,8 +166,12 @@ button {
 .dark-theme {
   background: var(--dark-background);
 }
+.dark-theme .top-section {
+  color: var(--white);
+}
 .dark-theme .screen {
   background: var(--dark-screen);
+  color: var(--white);
 }
 .dark-theme .calculator {
   background: var(--dark-calculator);
@@ -198,8 +204,12 @@ button {
 .neon-theme {
   background: var(--neon-background);
 }
+.neon-theme .top-section {
+  color: var(--yellow);
+}
 .neon-theme .screen {
   background: var(--neon-screen);
+  color: var(--yellow);
 }
 .neon-theme .calculator {
   background: var(--neon-calculator);

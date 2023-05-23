@@ -42,8 +42,12 @@ button {
 
 .light-theme {
   background: var(--light-background);
+  .top-section {
+    color: var(--gray);
+  }
   .screen {
     background: var(--light-screen);
+    color: var(--gray);
   }
   .calculator {
     background: var(--light-calculator);
@@ -76,8 +80,12 @@ button {
 
 .dark-theme {
   background: var(--dark-background);
+  .top-section {
+    color: var(--white);
+  }
   .screen {
     background: var(--dark-screen);
+    color: var(--white);
   }
   .calculator {
     background: var(--dark-calculator);
@@ -110,8 +118,12 @@ button {
 
 .neon-theme {
   background: var(--neon-background);
+  .top-section {
+    color: var(--yellow);
+  }
   .screen {
     background: var(--neon-screen);
+    color: var(--yellow);
   }
   .calculator {
     background: var(--neon-calculator);
