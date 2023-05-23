@@ -1,0 +1,145 @@
+/* CALCULATOR SECTION */
+.calculator {
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 10px;
+  @media(min-width: 500px) {
+    grid-gap: 20px;
+  }
+}
+
+// MEDIA QUERY
+
+button {
+  border: none;
+  padding: 10px 5px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: var(--gray);
+  @media(min-width: 500px) {
+    font-size: 28px;
+  }
+}
+
+#reset, #equal, #delete {
+  font-size: 16px;
+  @media(min-width: 500px) {
+    font-size: 20px;
+  }
+}
+#reset {
+  grid-area: 5 / 1 / 6 / 3;
+}
+
+#equal {
+  grid-area: 5 / 3 / 6 / 5;
+}
+
+/* THEME STYLES */
+
+.light-theme {
+  background: var(--light-background);
+  .screen {
+    background: var(--light-screen);
+  }
+  .calculator {
+    background: var(--light-calculator);
+    button {
+      background: var(--light);
+      box-shadow: 0px 4px 0px var(--light-shadow);
+      &:hover {
+        background: var(--light-hover);
+        cursor: pointer;
+      }
+    }
+    #delete, #reset {
+      background: var(--reset-light);
+      box-shadow: 0px 4px 0px var(--reset-light-shadow);
+      color: var(--white);
+      &:hover {
+        background: var(--reset-light-hover);
+      }
+    }
+    #equal {
+      background: var(--equal-light);
+      box-shadow: 0px 4px 0px var(--equal-light-shadow);
+      color: var(--white);
+      &:hover {
+        background: var(--equal-light-hover);
+      }
+    }
+  }
+}
+
+.dark-theme {
+  background: var(--dark-background);
+  .screen {
+    background: var(--dark-screen);
+  }
+  .calculator {
+    background: var(--dark-calculator);
+    button {
+      background: var(--dark);
+      box-shadow: 0px 4px 0px var(--dark-shadow);
+      &:hover {
+        background: var(--dark-hover);
+        cursor: pointer;
+      }
+    }
+    #delete, #reset {
+      background: var(--reset-dark);
+      box-shadow: 0px 4px 0px var(--reset-dark-shadow);
+      color: var(--white);
+      &:hover {
+        background: var(--reset-dark-hover);
+      }
+    }
+    #equal {
+      background: var(--equal-dark);
+      box-shadow: 0px 4px 0px var(--equal-dark-shadow);
+      color: var(--white);
+      &:hover {
+        background: var(--equal-dark-hover);
+      }
+    }
+  }
+}
+
+.neon-theme {
+  background: var(--neon-background);
+  .screen {
+    background: var(--neon-screen);
+  }
+  .calculator {
+    background: var(--neon-calculator);
+    button {
+      background: var(--neon);
+      box-shadow: 0px 4px 0px var(--neon-shadow);
+      color: var(--yellow);
+      &:hover {
+        background: var(--neon-hover);
+        cursor: pointer;
+      }
+    }
+    #delete, #reset {
+      background: var(--reset-neon);
+      box-shadow: 0px 4px 0px var(--reset-neon-shadow);
+      color: var(--white);
+      &:hover {
+        background: var(--reset-neon-hover);
+      }
+    }
+    #equal {
+      background: var(--equal-neon);
+      box-shadow: 0px 4px 0px var(--equal-neon-shadow);
+      color: #000;
+      &:hover {
+        background: var(--equal-neon-hover);
+      }
+    }
+
+  }
+}
