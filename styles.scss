@@ -1,6 +1,8 @@
 @import './styles/variables';
+@import './styles/top-section';
 @import './styles/screen';
 @import './styles/calculator';
+@import './styles/attribution';
 
 // google fonts
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;600;700&display=swap');
@@ -26,10 +28,14 @@ body {
   font-family: var(--main-font);
 }
 
-.padding {
-  padding: 20px;
+main {
+  display: grid;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto;
+  flex-grow: 1;
   @media(min-width: 500px) {
-    padding: 30px;
+    width: 500px;
   }
 }
 
@@ -38,10 +44,9 @@ a {
   text-decoration: none;
 }
 
-main {
-  width: 90%;
-  margin: 0 auto;
+.padding {
+  padding: 20px;
   @media(min-width: 500px) {
-    width: 500px;
+    padding: 30px;
   }
 }

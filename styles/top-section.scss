@@ -1,0 +1,16 @@
+.top-section {
+  padding: 10px 2px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.theme-selector{
+  display: flex;
+  align-items: center;
+  .theme {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+    font-weight: bold;
+  }
+}

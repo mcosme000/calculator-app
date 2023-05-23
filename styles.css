@@ -45,6 +45,23 @@
   --equal-neon-hover: #94FFF9;
 }
 
+.top-section {
+  padding: 10px 2px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--white);
+}
+
+.theme-selector {
+  display: flex;
+  align-items: center;
+}
+.theme-selector .theme {
+  font-size: 8px;
+  letter-spacing: 1.1px;
+  font-weight: bold;
+}
+
 .screen {
   border-radius: 10px;
   margin-bottom: 20px;
@@ -213,6 +230,12 @@ button {
   background: var(--equal-neon-hover);
 }
 
+.attribution {
+  font-size: 14px;
+  padding: 10px 5px;
+  background: var(--light);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -233,12 +256,16 @@ body {
   font-family: var(--main-font);
 }
 
-.padding {
-  padding: 20px;
+main {
+  display: grid;
+  align-items: center;
+  width: 92%;
+  margin: 0 auto;
+  flex-grow: 1;
 }
 @media (min-width: 500px) {
-  .padding {
-    padding: 30px;
+  main {
+    width: 500px;
   }
 }
 
@@ -247,13 +274,12 @@ a {
   text-decoration: none;
 }
 
-main {
-  width: 90%;
-  margin: 0 auto;
+.padding {
+  padding: 20px;
 }
 @media (min-width: 500px) {
-  main {
-    width: 500px;
+  .padding {
+    padding: 30px;
   }
 }
 
