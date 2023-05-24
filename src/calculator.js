@@ -58,7 +58,7 @@ export const calculator = () => {
   }
 
   function handleOperation() {
-    if (operator !== '') {
+    if (operator !== '' && secondNumber !== '') {
       result = getResult();
       current.innerHTML = result
       operator = ''
