@@ -54,7 +54,7 @@ button {
     button {
       background: var(--light);
       box-shadow: 0px 4px 0px var(--light-shadow);
-      &:hover {
+      &:hover, &#operator:focus {
         background: var(--light-hover);
         cursor: pointer;
       }
@@ -92,7 +92,7 @@ button {
     button {
       background: var(--dark);
       box-shadow: 0px 4px 0px var(--dark-shadow);
-      &:hover {
+      &:hover, &:focus {
         background: var(--dark-hover);
         cursor: pointer;
       }
@@ -131,7 +131,7 @@ button {
       background: var(--neon);
       box-shadow: 0px 4px 0px var(--neon-shadow);
       color: var(--yellow);
-      &:hover {
+      &:hover, &:focus {
         background: var(--neon-hover);
         cursor: pointer;
       }
