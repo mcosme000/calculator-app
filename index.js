@@ -38,6 +38,7 @@ function handleDelete() {
 function getResult() {
   firstNumber = Number(firstNumber);
   secondNumber = Number(secondNumber);
+  console.log(`Getting result: ${firstNumber} and ${secondNumber}`)
   if (operator === '+') {
     result = firstNumber + secondNumber
   } else if (operator === '-') {
@@ -51,16 +52,19 @@ function getResult() {
 }
 
 function handleOperation() {
-  result = getResult();
-  current.innerHTML = result
-  // clean the operator!
-  operator = ''
-  // set the firstNumber to the result, I need to return it to string!
-  firstNumber = result.toString()
-  console.log(`The first number is ${firstNumber}, type ${typeof firstNumber}`);
-  // set the second number to 0
-  console.log('setting the second number to 0');
-  secondNumber = ''
+  if (operator !== '') {
+    result = getResult();
+    current.innerHTML = result
+    // clean the operator
+    operator = ''
+    console.log(`resetting the operator to ${operator}`);
+    // set the firstNumber to the result, I need to return it to string!
+    firstNumber = result.toString()
+    console.log(`Setting the first number to ${firstNumber}, type ${typeof firstNumber}`);
+    // set the second number to 0
+    console.log('setting the second number to 0');
+    secondNumber = ''
+  }
 }
 
 function handleDecimal() {
@@ -74,7 +78,7 @@ function handleDecimal() {
 function updateNumbers(number) {
   if (operator === '') {
     updateTopScreen(number)
-    firstNumber = topString.innerHTML;
+    firstNumber += number;
     console.log(`The first number: ${firstNumber}, is type ${typeof firstNumber}`)
   } else {
     updateTopScreen(number)
