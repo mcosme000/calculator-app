@@ -10,6 +10,15 @@ let secondNumber = '';
 let result = 0;
 let operator = '';
 
+function handleDelete() {
+  firstNumber = '';
+  secondNumber = '';
+  result = 0;
+  operator = '';
+  topString.innerHTML = '';
+  current.innerHTML = '';
+}
+
 function updateTopScreen() {
   topString.innerHTML = `${firstNumber} ${operator} ${secondNumber}`
 }
@@ -20,20 +29,10 @@ function updateOperator(text) {
     operator = text
     updateTopScreen();
     console.log((`Operator updated to ${operator}`));
-    handleOperation()
   } else {
     operator = text
     updateTopScreen()
   }
-}
-
-function handleDelete() {
-  firstNumber = '';
-  secondNumber = '';
-  result = 0;
-  operator = '';
-  topString.innerHTML = '';
-  current.innerHTML = '';
 }
 
 function getResult() {
@@ -69,10 +68,16 @@ function handleOperation() {
 }
 
 function handleDecimal() {
-  if (secondNumber !== 0) {
-    console.log("Adding decimal to second number")
+  if (secondNumber !== '') {
+    if (!secondNumber.includes('.')) {
+      secondNumber += '.'
+      updateTopScreen()
+    }
   } else {
-    console.log("Adding decimal to fisrt number");
+    if (!firstNumber.includes('.')) {
+      firstNumber += '.'
+      updateTopScreen()
+    }
   }
 }
 
