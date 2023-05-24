@@ -10,7 +10,7 @@ let secondNumber = '';
 let result = 0;
 let operator = '';
 
-function handleDelete() {
+function handleReset() {
   firstNumber = '';
   secondNumber = '';
   result = 0;
@@ -19,16 +19,24 @@ function handleDelete() {
   current.innerHTML = '';
 }
 
+function handleDelete() {
+  if (secondNumber !== '') {
+    secondNumber = secondNumber.slice(0, -1)
+    updateTopScreen()
+  } else {
+    firstNumber = firstNumber.slice(0, -1)
+    updateTopScreen()
+  }
+}
+
 function updateTopScreen() {
   topString.innerHTML = `${firstNumber} ${operator} ${secondNumber}`
 }
 
 function updateOperator(text) {
   if (operator !== '') {
-    console.log(`An operator already exists: ${operator}`)
     operator = text
     updateTopScreen();
-    console.log((`Operator updated to ${operator}`));
   } else {
     operator = text
     updateTopScreen()
@@ -38,7 +46,6 @@ function updateOperator(text) {
 function getResult() {
   firstNumber = Number(firstNumber);
   secondNumber = Number(secondNumber);
-  console.log(`Getting result: ${firstNumber} and ${secondNumber}`)
   if (operator === '+') {
     result = firstNumber + secondNumber
   } else if (operator === '-') {
@@ -55,14 +62,8 @@ function handleOperation() {
   if (operator !== '') {
     result = getResult();
     current.innerHTML = result
-    // clean the operator
     operator = ''
-    console.log(`resetting the operator to ${operator}`);
-    // set the firstNumber to the result, I need to return it to string!
     firstNumber = result.toString()
-    console.log(`Setting the first number to ${firstNumber}, type ${typeof firstNumber}`);
-    // set the second number to 0
-    console.log('setting the second number to 0');
     secondNumber = ''
   }
 }
@@ -85,11 +86,9 @@ function updateNumbers(number) {
   if (operator === '') {
     firstNumber += number;
     updateTopScreen()
-    console.log(`The first number: ${firstNumber}, is type ${typeof firstNumber}`)
   } else {
     secondNumber += number
     updateTopScreen()
-    console.log(`The second number: ${secondNumber}, type ${typeof secondNumber}`)
   }
 }
 
@@ -103,7 +102,7 @@ buttons.forEach(button => {
     } else if (currentElement === "delete") {
       handleDelete()
     } else if (currentElement === "reset") {
-      handleDelete()
+      handleReset()
     } else if (currentElement === "equal") {
       handleOperation()
     } else if (currentElement === "comma") {
