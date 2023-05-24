@@ -10,19 +10,20 @@ let secondNumber = '';
 let result = 0;
 let operator = '';
 
-function updateTopScreen(text) {
-  topString.innerHTML += text
+function updateTopScreen() {
+  topString.innerHTML = `${firstNumber} ${operator} ${secondNumber}`
 }
 
 function updateOperator(text) {
-  updateTopScreen(` ${text} `)
   if (operator !== '') {
     console.log(`An operator already exists: ${operator}`)
     operator = text
+    updateTopScreen();
     console.log((`Operator updated to ${operator}`));
     handleOperation()
   } else {
     operator = text
+    updateTopScreen()
   }
 }
 
@@ -77,12 +78,12 @@ function handleDecimal() {
 
 function updateNumbers(number) {
   if (operator === '') {
-    updateTopScreen(number)
     firstNumber += number;
+    updateTopScreen()
     console.log(`The first number: ${firstNumber}, is type ${typeof firstNumber}`)
   } else {
-    updateTopScreen(number)
     secondNumber += number
+    updateTopScreen()
     console.log(`The second number: ${secondNumber}, type ${typeof secondNumber}`)
   }
 }
