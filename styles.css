@@ -133,6 +133,12 @@ button {
 .light-theme .top-section {
   color: var(--gray);
 }
+.light-theme .radio-buttons {
+  background: var(--light-calculator);
+}
+.light-theme .radio-buttons input {
+  background: var(--equal-light);
+}
 .light-theme .screen {
   background: var(--light-screen);
   color: var(--gray);
@@ -170,6 +176,12 @@ button {
 }
 .dark-theme .top-section {
   color: var(--white);
+}
+.dark-theme .radio-buttons {
+  background: var(--dark-calculator);
+}
+.dark-theme .radio-buttons input {
+  background: var(--equal-dark);
 }
 .dark-theme .screen {
   background: var(--dark-screen);
@@ -209,6 +221,12 @@ button {
 .neon-theme .top-section {
   color: var(--yellow);
 }
+.neon-theme .radio-buttons {
+  background: var(--neon-calculator);
+}
+.neon-theme .radio-buttons input {
+  background: var(--equal-neon);
+}
 .neon-theme .screen {
   background: var(--neon-screen);
   color: var(--yellow);
@@ -246,6 +264,40 @@ button {
   font-size: 14px;
   padding: 10px 5px;
   background: var(--light);
+}
+
+.toggle {
+  margin-left: 10px;
+}
+
+.labels {
+  padding: 0px 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.radio-buttons {
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+}
+.radio-buttons input {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  appearance: none;
+  background: #000;
+  opacity: 0;
+}
+.radio-buttons input:hover {
+  cursor: pointer;
+}
+
+#dark {
+  opacity: 1;
 }
 
 * {

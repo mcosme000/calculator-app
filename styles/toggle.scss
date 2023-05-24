@@ -1,0 +1,34 @@
+.toggle {
+  margin-left: 10px;
+}
+
+.labels {
+  padding: 0px 2px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.radio-buttons {
+  padding: 1px;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+
+  input {
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    appearance: none;
+    background: #000;
+    opacity: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+#dark {
+  opacity: 1;
+}

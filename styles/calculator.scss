@@ -45,6 +45,13 @@ button {
   .top-section {
     color: var(--gray);
   }
+
+  .radio-buttons {
+    background: var(--light-calculator);
+    input {
+      background: var(--equal-light);
+    }
+  }
   .screen {
     background: var(--light-screen);
     color: var(--gray);
@@ -83,6 +90,12 @@ button {
   .top-section {
     color: var(--white);
   }
+  .radio-buttons {
+    background: var(--dark-calculator);
+    input {
+      background: var(--equal-dark);
+    }
+  }
   .screen {
     background: var(--dark-screen);
     color: var(--white);
@@ -120,6 +133,12 @@ button {
   background: var(--neon-background);
   .top-section {
     color: var(--yellow);
+  }
+  .radio-buttons {
+    background: var(--neon-calculator);
+    input {
+      background: var(--equal-neon);
+    }
   }
   .screen {
     background: var(--neon-screen);
