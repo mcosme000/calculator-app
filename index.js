@@ -37,7 +37,7 @@ function updateOperator(text) {
   if (operator !== '') {
     operator = text
     updateTopScreen();
-  } else {
+  } else if (firstNumber !== '' ) {
     operator = text
     updateTopScreen()
   }
@@ -47,15 +47,14 @@ function getResult() {
   firstNumber = Number(firstNumber);
   secondNumber = Number(secondNumber);
   if (operator === '+') {
-    result = firstNumber + secondNumber
+    return firstNumber + secondNumber
   } else if (operator === '-') {
-    result = firstNumber - secondNumber
+    return firstNumber - secondNumber
   } else if (operator === 'x') {
-    result = firstNumber * secondNumber
+    return firstNumber * secondNumber
   } else {
-    result = firstNumber / secondNumber
+    return firstNumber / secondNumber
   }
-  return result;
 }
 
 function handleOperation() {
@@ -96,16 +95,16 @@ function updateNumbers(number) {
 // 1. identify the clicked element
 buttons.forEach(button => {
   button.addEventListener("click", (e) => {
-    let currentElement = e.target.id
-    if (currentElement === "operator") {
+    let currentElementId = e.target.id
+    if (currentElementId === "operator") {
       updateOperator(e.target.innerHTML)
-    } else if (currentElement === "delete") {
+    } else if (currentElementId === "delete") {
       handleDelete()
-    } else if (currentElement === "reset") {
+    } else if (currentElementId === "reset") {
       handleReset()
-    } else if (currentElement === "equal") {
+    } else if (currentElementId === "equal") {
       handleOperation()
-    } else if (currentElement === "comma") {
+    } else if (currentElementId === "comma") {
       handleDecimal()
     } else {
       updateNumbers(e.target.id)
