@@ -1,6 +1,3 @@
-
-console.log("Hi from themes");
-
 let inputs = document.querySelectorAll("input");
 const body = document.querySelector("body");
 inputs = [...inputs]

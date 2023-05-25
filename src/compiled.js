@@ -1,4 +1,3 @@
-console.log("Hi from calculator");
 // DOM elements
 const buttons = document.querySelectorAll("button");
 let topString = document.getElementById("top-screen");
@@ -110,9 +109,6 @@ buttons.forEach(button => {
     }
   })
 })
-
-console.log("Hi from themes");
-
 let inputs = document.querySelectorAll("input");
 const body = document.querySelector("body");
 inputs = [...inputs]

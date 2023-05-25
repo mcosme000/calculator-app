@@ -1,4 +1,3 @@
-console.log("Hi from calculator");
 // DOM elements
 const buttons = document.querySelectorAll("button");
 let topString = document.getElementById("top-screen");
